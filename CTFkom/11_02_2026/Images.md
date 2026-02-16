@@ -24,6 +24,8 @@ Output: <br>
 The output doesn't tell a lot which is suspicious in itself. Since the title "images" is given in plural, it seems a little weird that we are only 
 given a single picture, which probably suggests that there is something hidden deeper inside.
 
+### Solution
+
 To further test our theory we can try some steganography tools in the bash terminal to check for hidden embedded files or pictures. 
 A clear candiate for this is to use steghide command since the image is of type JPEG. The steghide command is an open-source commandline 
 tool used to hide files inside JPEGs and BMP, or audio files like WAV and AU.
@@ -59,7 +61,7 @@ Output: <br>
 ![image1](https://github.com/user-attachments/assets/51aa1aa8-11b7-4516-8cfa-38a514ba8124) 
 <br>
 It seems like we found "the flag". 
-We take a look in the metadata, but the flag doesnt seem to be there. Therefore we can assume that its hidden in the image again.
+We take a look in the metadata, but the flag doesnt seem to be there. Therefore we can assume that it's hidden in the image again.
 We do a check with the steghide info command to test our theory: <br>
 ```
 steghide info image1.jpg
@@ -77,10 +79,16 @@ Output: <br>
 <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/2f255598-f58d-47df-aa4c-fd50b1a9d959" />
 <br>
 The output gives a flag.txt file that contains the flag:
+**CTFkom{W0W_U_f1gUr3d_m3_0uT}**
 
-## CTFkom{W0W_U_f1gUr3d_m3_0uT} ##
+----
 
+### Conclusion
 
+In this challenge it's important to pay attention to the details in the description and title. The callenge required a multi-step extraction
+process using steganography tools like [steghide](https://www.kali.org/tools/steghide/)
+ and [stegseek](https://github.com/RickdeJager/stegseek). The stegseek passphrase bypass is a vital lesson that shows how bad actors can brute-force
+ weak passwords in seconds using massive wordlists. Furthermore, Steghide could also be used maliciously by moving sensitive data or even malicious scripts without detection. These hidden payloads can then be extracted at a later time and executed.
 
 
 

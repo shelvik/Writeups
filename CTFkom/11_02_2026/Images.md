@@ -19,7 +19,8 @@ I choose to run the exiftool command in the kali bash to extract the metadata.
 exiftool image.jpg
 ```
 Output: <br>
-<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/15d7d29d-a0b1-4fe5-8a56-00e99a6a5d01" />
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/393a5460-2ac6-41a5-a64c-b9729d4d964c" />
+
 <br>
 The output doesn't tell a lot which is suspicious in itself. Since the title "images" is given in plural, it seems a little weird that we are only 
 given a single picture, which probably suggests that there is something hidden deeper inside.
@@ -89,6 +90,7 @@ In this challenge it's important to pay attention to the details in the descript
 process using steganography tools like [steghide](https://www.kali.org/tools/steghide/)
  and [stegseek](https://github.com/RickdeJager/stegseek). The stegseek passphrase bypass is a vital lesson that shows how bad actors can brute-force
  weak passwords in seconds using massive wordlists. Furthermore, Steghide could also be used maliciously by moving sensitive data or even malicious scripts without detection. These hidden payloads can then be extracted at a later time and executed.
+
 
 
 
